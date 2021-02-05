@@ -10,16 +10,16 @@ int main(void)
 {
 	int i; /* incrementer */
 
-	i = 0;
+	i = '0';
 
-	while (i <= 0)
+	while (i <= '9')
 	{
 
 		putchar(i);
 		i++;
 	}
 
-	putchar("\n");
+	putchar('\n');
 	return (0);
 
 }

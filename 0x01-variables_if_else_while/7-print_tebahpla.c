@@ -10,16 +10,16 @@ int main(void)
 {
 	char rev;
 
-	rev = 96;
+	rev = 'z';
 
-	while (rev >= 122)
+	while (rev >= 'a')
 	{
 
 		putchar(rev);
 		rev--;
 	}
 
-	putchar("\n");
+	putchar('\n');
 	return (0);
 
 }
