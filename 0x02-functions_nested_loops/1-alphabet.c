@@ -4,7 +4,7 @@
  * print_alphabet- printing alphabet in lowercase
  *
  *
- * 
+ *
  */
 
 void print_alphabet(void)
