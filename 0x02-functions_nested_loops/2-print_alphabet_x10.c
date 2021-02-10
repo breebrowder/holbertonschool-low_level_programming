@@ -11,14 +11,12 @@ void print_alphabet_x10(void)
 	int i; /* iterator */
 	int ch;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i <= 10; i++)
 	{
-		ch = '97';
-		while (ch <= '122')
-		{
+		for (ch = 'a'; ch <= 'z'; ch++)
+
 			_putchar(ch);
-			ch++;
-		}
+
 		_putchar('\n');
 	}
 }
