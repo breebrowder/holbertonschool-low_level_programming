@@ -5,7 +5,7 @@
 /**
  * main - assigning a random number to n each time
  *
- * Return: 0
+ * Return: zero
  */
 int main(void)
 {
