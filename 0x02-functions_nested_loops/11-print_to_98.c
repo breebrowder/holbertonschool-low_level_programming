@@ -21,6 +21,8 @@ void print_to_98(int n)
 			n--; /* decrementer */
 		}
 	}
+	else
+	{
 
 		while (n <= 98)
 		{
@@ -31,5 +33,6 @@ void print_to_98(int n)
 			}
 			n++; /* incrementer */
 		}
+	}
 	printf("\n");
 }
