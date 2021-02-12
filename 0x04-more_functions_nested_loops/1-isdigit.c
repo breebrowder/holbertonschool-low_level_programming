@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _isdigit- checking for numbers 0-9
+ * _isdigit- checking for numbers 0 through 9
  * @c: int type
  * Return: 1 is yes, 0 if not
  */
