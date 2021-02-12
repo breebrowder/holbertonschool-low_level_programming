@@ -20,8 +20,8 @@ void more_numbers(void)
 		for (n = 0; n <= 14; n++)
 		{
 		if (n >= 10) /* there is no char value on ascii past 9 */
-			_putchar('0' + n / 10); /* this accounts for all numbers to the left of 10 set value */
-		_putchar(n % 10 + '0'); /* this accounts for all numbers to the right of 10 set value */
+			_putchar('0' + n / 10); /* all num to the left of 10 */
+		_putchar(n % 10 + '0'); /* all num to the right of 10 */
 		}
 	_putchar('\n');
 	}
