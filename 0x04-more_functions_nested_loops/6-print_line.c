@@ -2,7 +2,7 @@
 
 /**
  * print_line- drawing a straight line in the terminal
- *
+ * @n: int type
  * Return: void
  */
 
@@ -12,7 +12,7 @@ void print_line(int n)
 
 	i = 0;
 
-	while(i < n)
+	while (i < n)
 	{
 		_putchar('_');
 		i++;
