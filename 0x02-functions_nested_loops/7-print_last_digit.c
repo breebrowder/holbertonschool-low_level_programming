@@ -11,12 +11,17 @@ int print_last_digit(int n)
 {
 	int last;
 
-	printf("Enter a number:");
-	scanf("%d", &n);
-
-	last = n % 10;
-	printf("Last digit: %d\n", last);
-
-	return (0);
+	if (n < 0)
+	{
+		last = -1 * (n % 10);
+		_putchar(last + '0');
+		return (last);
+	}
+	else
+	{
+		last = n % 10;
+		_putchar(last + '0');
+		return (last);
+	}
 
 }
