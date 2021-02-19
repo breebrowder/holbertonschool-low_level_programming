@@ -9,21 +9,21 @@
 
 char *leet(char *str)
 {
-	int leet = 0;
+	char *characters;
+	char *numbers;
+	int x;
+	int y;
 
-	while (str[leet] != '\0')
+	characters = "aAeEoOtTlL";
+	numbers = "4433007711";
+
+	for (x = 0; str[x] != '\0'; x++)
 	{
-		if (str[leet] == 'a' || str[leet] == 'A')
-			str[leet] = '4';
-		while (str[leet] == 'e' || str[leet] == 'E')
-			str[leet] = '3';
-		while (str[leet] == 'o' || str[leet] == 'O')
-			str[leet] = '0';
-		while (str[leet] == 't' || str[leet] == 'T')
-			str[leet] = '7';
-		while (str[leet] == 'l' || str[leet] == 'L')
-			str[leet] = '1';
-		leet++;
+		for (y = 0; characters[y] != '\0'; y++)
+		{
+			if (str[x] == characters[y])
+				str[x] = numbers[y];
+		}
 	}
 	return (str);
 }
