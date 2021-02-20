@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * cap_string- function that capitalizes all words of a string
+ * cap_string- a function that capitalizes all words of a string
  * @s: pointer to string
  * Description: not yet complete, betty compliant with a return
  * Return: s
