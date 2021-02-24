@@ -11,7 +11,7 @@
 * You are not allowed to use the standard library. Any use of functions like printf, puts, etc is forbidden
 * You are allowed to use _putchar
 * You dont have to push _putchar.c, we will use our file. If you do it wont be taken into account
-* In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you dont have to push them to your r  epo (if you do we wont take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one sh  own in the examples
+* In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you dont have to push them to your r  epo (if you do we won't take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one sh  own in the examples
 * The prototypes of all your functions and the prototype of the function _putchar should be included in your header file called holberton.h
 * Dont forget to push your header file
 * You are not allowed to use any kind of loops
