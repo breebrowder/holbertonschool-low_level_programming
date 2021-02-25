@@ -2,8 +2,8 @@
 
 /**
  * _pow_recursion- returns the value of x raised to the power of y
- * @x: value
- * @y: value
+ * @x: int value
+ * @y: int value
  *
  * Return: If n is lower than 0, return -1 to indicate an error
  */
