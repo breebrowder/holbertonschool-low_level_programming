@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stddef.h>
+#include <stddef.h> /* attempted using "NULL" with this header */
 
 /**
  * _strlen_recursion- returns the length of a string
