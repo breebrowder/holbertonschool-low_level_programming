@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stddef.h>
 
 /**
  * _strlen_recursion- returns the length of a string
@@ -9,14 +10,13 @@
 
 int _strlen_recursion(char *s)
 {
-	int i;
+	int length; /* literal variable name helps conceptualize */
 
-	i = 0;
 
-	for (; s[i]; i++)
+	if (*s == '\0') /* if you move through string from index 0, return 0 */
+		return (0);
 	{
-
-		i += _strlen_recursion(s + 1);
+		length = 1 + _strlen_recursion(++s); /* (++s) same as (s + 1) */
 	}
-	return (i);
+	return (length);
 }
