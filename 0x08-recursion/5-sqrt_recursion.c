@@ -17,6 +17,7 @@ int _sqrt_recursion(int n)
  * @n: ntype int
  * @a: type int
  *
+ * Return: new func
  */
 
 int new_function(int n, int a)
