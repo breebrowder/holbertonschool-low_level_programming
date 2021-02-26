@@ -9,12 +9,28 @@
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
+	return (new_function(n, 0));
+}
+
+/**
+ * new_function- "main" function
+ * @n: ntype int
+ * @a: type int
+ *
+ */
+
+int new_function(int n, int a)
+{
+	int i = a * a;
+
+	if (i == n)
+	{
+		return (a);
+	}
+
+	if (i > n)
 	{
 		return (-1);
 	}
-	else
-	{
-		return (1, n));
-	}
+	return (n + a + 1);
 }
