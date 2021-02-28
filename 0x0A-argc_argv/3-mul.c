@@ -12,15 +12,12 @@
 
 int main(int argc, char *argv[])
 {
-	int index1 = atoi(argv[1]);
-	int index2 = atoi(argv[2]);
-
 	(void)argc;
 
 
-	if (index1 && index2) /* 1 & 2 for both indexes */
+	if (argv[1] && argv[2]) /* 1 & 2 for both indexes */
 	{
-		printf("%d\n", index1 * index2);
+		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	}
 	else
 		printf("Error\n");
