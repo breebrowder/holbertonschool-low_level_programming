@@ -5,17 +5,16 @@
 /**
  * main- printing program name, followed by new line
  * @argc: argument count
- * @argv: argument vector
+ * @argv: argument vector (passed as an array of strings)
  *
  * Return: 0
  */
 
 int main(int argc, char *argv[])
 {
-	(void)*argv;
 	(void)argc;
 
-	printf("./mynameis\n");
-	return (0);
+	printf("%s\n", argv[0]);
 
+	return (0);
 }
