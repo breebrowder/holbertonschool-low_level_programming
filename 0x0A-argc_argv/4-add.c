@@ -20,11 +20,13 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		for (y = 0; argv[i][y]; y++)
+		{
 
 			if (!argv[i][y] >= '0' && argv[i][y] <= '9')
-		{
-			printf("Error\n");
-			return (1);
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		total += atoi(argv[i]);
 		/* += adds value on the right to a variable & assigns result */
