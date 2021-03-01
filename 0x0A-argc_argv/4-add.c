@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * main- adds positive numbers
+ * main- add positive numbers
  * @argc: argument count
  * @argv: argument vector (passed as an array of strings)
  * Description: using atoi to convert a char to an int
