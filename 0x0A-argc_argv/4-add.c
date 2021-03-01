@@ -13,12 +13,15 @@
 int main(int argc, char *argv[])
 {
 	int i = 1;
+	int y;
 	int total;
 
 	total = 0;
 	while (i < argc)
 	{
-		if (!argv[i]) /* array will not have a null-byte */
+		for (y = 0; argv[i][y]; y++)
+
+			if (!argv[i][y] >= '0' && argv[i][y] <= '9')
 		{
 			printf("Error\n");
 			return (1);
