@@ -17,13 +17,11 @@ char *create_array(unsigned int size, char c)
 		return (NULL); /* condition */
 
 	array = malloc(size * sizeof(*array));
+	if (array == NULL)
+		return (NULL); /* condition if case fails */
 	for (; y < size; y++)
 	{
 		array[y] = c; /* initializing with char c */
 	}
-
-	if (array == NULL)
-		return (NULL); /* condition if case fails */
-
 	return (array); /* conditon returns pointer to array */
 }
