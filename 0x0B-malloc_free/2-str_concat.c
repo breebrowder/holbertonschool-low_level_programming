@@ -13,7 +13,9 @@ char *str_concat(char *s1, char *s2)
 	char *array;
 	int x = 0;
 	int y = 0;
-	int i = 0;
+	int j;
+	int i;
+
 
 	if (s1 == '\0')
 		s1 = ""; /* condition with empty string */
@@ -31,10 +33,15 @@ char *str_concat(char *s1, char *s2)
 	if (array == '\0')
 		return ('\0'); /* condition failure case */
 
-	while (i < (x + y + 1))
+	for (j = 0; j < x; j++) /* j is less than the length of s1 */
 	{
-			array[i] = s1[i];
-			i++;
+		array[j] = s1[j];
+	}
+
+	for (i = 0; i < y; i++) /* i is less than the length of s2 */
+	{
+		array[j] = s2[i];
+		j++;
 	}
 	return (array);
 }
