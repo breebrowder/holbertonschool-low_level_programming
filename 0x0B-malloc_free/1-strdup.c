@@ -20,13 +20,12 @@ char *_strdup(char *str)
 		continue;
 
 	dup = malloc(x * sizeof(*dup) + 1);
+	if (dup == '\0')
+		return ('\0'); /* condition */
 	while (y < x)
 	{
 		dup[y] = str[y];
 		y++;
 	}
-	if (dup == '\0')
-		return ('\0'); /* condition */
-
 	return (dup); /* condition */
 }
