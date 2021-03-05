@@ -10,8 +10,9 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *allocatedmemory;
-	unsigned int iterator = 0;
+	void *allocatedmemory;
+	char *replace;
+	unsigned int i;
 
 	if (nmemb == 0)
 		return (NULL); /* condition */
@@ -19,13 +20,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (size == 0)
 		return (NULL); /* condition */
 
-	allocatedmemory = malloc(nmemb * size);
+	allocatedmemory = malloc(nmemb * size); /* being initialized */
 	if (allocatedmemory == NULL)
 		return (NULL); /* failure case */
 
-	while (iterator < nmemb)
-	{
-		iterator++;
-	}
+	replace = allocatedmemory;
+
+	for (i = 0; i < nmemb; i++)
+		replace[i] = 0; /* memory set to zero; read man page */
+
+
 	return (allocatedmemory); /* condition */
 }
