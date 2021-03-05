@@ -24,9 +24,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL); /* failure case */
 
 	i = 0; /* iterator being initialized */
-	if (i < nmemb * size) /* will stop before nullbyte because != */
+	if (i < nmemb * size) /* will stop at nullbyte */
 	{
-		allocatedmemory[i] != '\0';
+		allocatedmemory[i] = '\0';
 		i++;
 	}
 	return (allocatedmemory); /* condition */
