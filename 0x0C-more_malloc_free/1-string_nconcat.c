@@ -11,38 +11,50 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *newspace; /* output is characters */
-	unsigned int x = 0; /* iterator for s1 */
-	unsigned int y = 0; /* iterator for s2 */
-	unsigned int j; /* edgecase ? */
-	unsigned int i; /* edgecase ? */
+	/* n is real length of s2; which is 6 */
 
+	char *newspace; /* output is characters */
+	unsigned int j; /* iterator for s1 */
+	unsigned int i; /* iterator for s2 */
+	unsigned int realstrlen; /* real length of s1 */
 
 	if (s1 == '\0')
 		s1 = ""; /* condition with empty string */
 
-	for (; s1[x] != '\0'; x++) /* STRLEN- move through both strings */
-		continue;
-
 	if (s2 == '\0')
 		s2 = ""; /* condition with empty string */
 
-	for (; s2[y] != '\0'; y++) /* STRLEN- move through both strings */
-		continue;
-
-	newspace = malloc((x * sizeof(*s1)) + (y * sizeof(*s2)) + 1);
+	realstrlen = (int)_strlen(s1);
+	newspace = malloc((realstrlen + n + 1) * sizeof(char));
 	if (newspace == '\0')
 		return ('\0'); /* condition failure case */
 
-	for (j = 0; j < x; j++) /* j is less than the length of s1 */
+	for (j = 0, i = 0; j < (realstrlen + n); j++) /* j < length of s1+s2 */
 	{
-		newspace[j] = s1[j];
+		if (j < realstrlen)
+			newspace[j] = s1[j]; /* "Holberton" */
+		else
+			newspace[j] = s2[i++]; /* "School" stop at index 6 */
 	}
-
-	for (i = 0; i < n; i++) /* i is less than the length of s2 */
-	{
-		newspace[j] = s2[i];
-		j++;
-	}
+	newspace[j] = '\0';
 	return (newspace);
+}
+
+/**
+ * _strlen- find length of string
+ * @s: string
+ * Description: pulled from 0x05-pointers_arrays_strings
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
 }
