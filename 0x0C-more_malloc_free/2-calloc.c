@@ -26,6 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	while (iterator < nmemb)
 	{
 		iterator++;
+		allocatedmemory[iterator] = 0;
 	}
 	return (allocatedmemory); /* condition */
 }
