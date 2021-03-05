@@ -26,6 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	i = 0; /* iterator being initialized */
 	if (i < nmemb * size) /* will stop before nullbyte because != */
 	{
+		allocatedmemory[i] != '\0';
 		i++;
 	}
 	return (allocatedmemory); /* condition */
