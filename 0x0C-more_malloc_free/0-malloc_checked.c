@@ -11,7 +11,7 @@ void *malloc_checked(unsigned int b)
 {
 	unsigned int *allocatedmemory;
 
-	allocatedmemory = malloc(b);
+	allocatedmemory = malloc(b); /* b is sizeof operator */
 
 	if (allocatedmemory == '\0') /* condition if it fails */
 		exit(98); /* process termination with status value */
