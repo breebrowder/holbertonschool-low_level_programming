@@ -11,7 +11,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *allocatedmemory;
-	unsigned int iterator;
+	unsigned int iterator = 0;
 
 	if (nmemb == 0)
 		return (NULL); /* condition */
@@ -26,7 +26,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	while (iterator < nmemb)
 	{
 		iterator++;
-		allocatedmemory[iterator] = 0;
 	}
 	return (allocatedmemory); /* condition */
 }
