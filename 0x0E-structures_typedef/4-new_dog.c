@@ -13,39 +13,46 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	if (d->name == NULL)
-		return;
+	struct dog *newstruct;
+	int i = 0; /* iterator for newname */
+	int x = 0; /* iterator for newowner */
+	int y;
+	char *newname;
+	char *newowner;
 
+	newstruct = malloc(sizeof(newstruct)); /* alloc memory for newstruct */
+	if (newstruct == '\0')
+		return ('\0'); /* failure case */
 
-
-
-
-
-
-
-
-
-
-
-
-}
-
-/**
- * _strcpy- copies the string pointed to by src
- * @dest: destination string
- * @src: source string
- * Return: dest
- */
-
-char *_strcpy(char *dest, char *src)
-{
-	int x = 0;
-
-	for (; src[x] != '\0'; x++)
+	newname = malloc(sizeof(char) * i); /* alloc memory for newname */
+	if (newname == '\0')
 	{
-		dest[x] = src[x];
+		free(newname);
+		free(newstruct);
+		return ('\0'); /* failure case */
 	}
-	dest[x] = '\0';
+	newowner = malloc(sizeof(char) * x); /* alloc memory for newowner */
+	if (newowner == '\0')
+	{
+		free(newowner);
+		free(newstruct);
+		return ('\0'); /* failure case */
+	}
 
-	return (dest);
+	for (; newname[i] != '\0'; i++) /* strlen: loop to find length */
+		continue;
+
+	for (; newowner[x] != '\0'; x++) /* strlen: loop to find length */
+		continue;
+
+/* TWO LOOPS FOR STRCPY */
+	for (y = 0; y <= i; y++)
+		newname[y] = name[y];
+	for (y = 0; y <= x; y++)
+		newowner[y] = owner[y];
+
+	newstruct->name = newname;
+	newstruct->age = age;
+	newstruct->owner = newowner;
+	return (newstruct);
 }
