@@ -2,18 +2,18 @@
 
 /**
  * main- prints all possible combinations of single-digit numbers
- *
+ * Description: numbers should be printed in ascending order
  * Return: 0
  */
 
 int main(void)
 {
-	int x;
+	int i;
 
-	for (x = 0; x <= 9; x++)
+	for (i = 0; i <= 9; i++)
 	{
-		putchar((x % 10) + '0');
-		if (x == 9)
+		putchar((i % 10) + '0');
+		if (i == 9)
 			continue;
 		putchar(',');
 		putchar(' ');
