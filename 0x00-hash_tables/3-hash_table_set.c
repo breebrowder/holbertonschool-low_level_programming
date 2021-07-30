@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * hash_table_set- function that adds an element to the hash table.
+ * hash_table_set- function that adds an element to the hash table
  * @ht: pointer to hash table
  * @key: the key
  * @value: value associated with key
@@ -11,36 +11,45 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	unsigned long int index;
-	hash_node_t *e = NULL, *newNode = NULL;
+	hash_node_t *el = NULL, *previous, *tmp;
+	unsigned long int idx; /* el is element; previous is previous head */
 
-/* e is our element */
+	idx = 0;
 
-	if (ht == NULL || key == NULL || (strcmp(key, "") == 0))
+	if (key == NULL || value == NULL || ht == NULL)
 		return (0); /* condition */
 
-	if (e == NULL)
+	if (key[0] == '\0')
+		return (0); /* key cannot be an empty srting */
+
+	el = malloc(sizeof(hash_node_t));
+	if (el == NULL)
 		return (0); /* condition */
 
-	index = 0;
+	el->key = strdup(key);
+	el->value = strdup(value);
+	el->next = NULL;
 
-	index = key_index((unsigned char *) key, ht->size);
-	e = ht->array[index];
+	idx = key_index((const unsigned char *)key, ht->size);
 
-	if (e && strcmp(key, e->key) == 0)
+	if (ht->array[idx] == NULL)
+		ht->array[idx] = el;
+	else
 	{
-		free(e->value);
-		e->value = strdup(value);
-		return (1);
+		previous = ht->array[idx];
+		for (tmp = previous; tmp != NULL; tmp = tmp->next)
+		{
+			if (strcmp(key, tmp->key) == 0)
+			{
+				free(tmp->value);
+				tmp->value = strdup(value);
+				free(el->value);
+				free(el);
+				return (1);
+			}
+		}
+		el->next = previous;
+		ht->array[idx] = el;
 	}
-
-	newNode = malloc(sizeof(hash_node_t));
-	if (newNode == NULL)
-		return (0);
-
-	newNode->key = strdup(key);
-	newNode->value = strdup(value);
-	newNode->next = ht->array[index];
-	ht->array[index] = newNode;
 	return (1);
 }
