@@ -14,11 +14,26 @@
 int linear_search(int *array, size_t size, int value)
 {
 
+	size_t idx = 0;
 
 
+	if (array == NULL) /* if arr is NOT a pointer to first elem of arr... */
+		return(-1); /* condition */
 
+/*	if (value == NULL)
+		return(-1); condition: remove comp between pointer/int */
 
+	if (idx == size)
+		return(-1); /* another edgecase */
 
+	for (idx = 0; idx < size; idx++); /* i is always less than # of elems */
+	{
+		printf("Value checked array[%lu] = [%d]\n", idx, array[idx]);
+		if (array[idx] == value) /* value must be present */
+			return(idx); /* first index where value is located */
+	}
 
-
+	return(-1); /* return needs to be an int b/c non-void function */
 }
+
+/* %lu = unsigned long int AND %d = signed integer */
